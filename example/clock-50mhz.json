@@ -1,0 +1,4 @@
+{
+  "type": "generators.clock",
+  "period": 20
+}

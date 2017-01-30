@@ -1,0 +1,37 @@
+{
+  "type": "composition",
+  "inputs": ["a", "b", "c", "d"],
+  "outputs": ["q"],
+  "elements": [
+    {
+      "name": "true",
+      "file": "../example/true.json"
+    },
+    {
+      "name": "false",
+      "file": "../example/false.json"
+    },
+    {
+      "name": "clock-50mhz",
+      "file": "../example/clock-50mhz.json"
+    },
+    {
+      "name": "and1",
+      "file": "../example/and.json"
+    },
+    {
+      "name": "and2",
+      "file": "../example/and.json"
+    }
+  ],
+  "wires": [
+    {
+      "from" : { "element": "clock-50mhz", "pin": "q" },
+      "to" : { "element": "and1", "pin": "a" }
+    },
+    {
+      "from" : { "element": "true", "pin": "q" },
+      "to" : { "element": "and1", "pin": "b" }
+    }
+  ]
+}
